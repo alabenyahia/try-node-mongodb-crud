@@ -1,0 +1,28 @@
+<h2>{{title}}</h2>
+
+<form class="row" action="/player" method="POST">
+    <input hidden name="id" value={{player._id}}>
+    <div class="input-field col s6">
+        <input name="name" id="name" type="text" value={{player.name}}>
+        <label for="name">Enter Player's Name</label>
+        <p style="color: #ff4444; margin: 0">{{player.nameError}}</p>
+    </div>
+
+    <div class="input-field col s6">
+        <input name="nationality" id="nat" type="text" value={{player.nationality}}>
+        <label for="nat">Enter Player's Nationality</label>
+        <p style="color: #ff4444; margin: 0">{{player.natError}}</p>
+    </div>
+
+    <div class="input-field col s6">
+        <input name="age" id="age" type="text" value={{player.age}}>
+        <label for="age">Enter Player's Age</label>
+        <p style="color: #ff4444; margin: 0">{{player.ageError}}</p>
+    </div>
+    <div class="col s12">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+        </button>
+        <a class="btn waves-effect waves-light pink" href="/player/all">Show All</a>
+    </div>
+</form>
